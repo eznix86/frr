@@ -9116,7 +9116,7 @@ DEFUN (no_ip_ospf_passive,
 
 DEFUN (ospf_redistribute_source,
        ospf_redistribute_source_cmd,
-       "redistribute " FRR_REDIST_STR_OSPFD " [{metric (0-16777214)|metric-type (1-2)|route-map WORD}]",
+       "redistribute " FRR_REDIST_STR_OSPFD " [{metric (0-16777214)|metric-type (1-2)|route-map RMAP_NAME}]",
        REDIST_STR
        FRR_REDIST_HELP_STR_OSPFD
        "Metric for redistributed routes\n"
@@ -9175,7 +9175,7 @@ DEFUN (ospf_redistribute_source,
 
 DEFUN (no_ospf_redistribute_source,
        no_ospf_redistribute_source_cmd,
-       "no redistribute " FRR_REDIST_STR_OSPFD " [{metric (0-16777214)|metric-type (1-2)|route-map WORD}]",
+       "no redistribute " FRR_REDIST_STR_OSPFD " [{metric (0-16777214)|metric-type (1-2)|route-map RMAP_NAME}]",
        NO_STR
        REDIST_STR
        FRR_REDIST_HELP_STR_OSPFD
@@ -9207,7 +9207,7 @@ DEFUN (no_ospf_redistribute_source,
 
 DEFUN (ospf_redistribute_instance_source,
        ospf_redistribute_instance_source_cmd,
-       "redistribute <ospf|table> (1-65535) [{metric (0-16777214)|metric-type (1-2)|route-map WORD}]",
+       "redistribute <ospf|table> (1-65535) [{metric (0-16777214)|metric-type (1-2)|route-map RMAP_NAME}]",
        REDIST_STR
        "Open Shortest Path First\n"
        "Non-main Kernel Routing Table\n"
@@ -9283,7 +9283,7 @@ DEFUN (ospf_redistribute_instance_source,
 
 DEFUN (no_ospf_redistribute_instance_source,
        no_ospf_redistribute_instance_source_cmd,
-       "no redistribute <ospf|table> (1-65535) [{metric (0-16777214)|metric-type (1-2)|route-map WORD}]",
+       "no redistribute <ospf|table> (1-65535) [{metric (0-16777214)|metric-type (1-2)|route-map RMAP_NAME}]",
        NO_STR
        REDIST_STR
        "Open Shortest Path First\n"
@@ -9378,7 +9378,7 @@ DEFUN (no_ospf_distribute_list_out,
 /* Default information originate. */
 DEFUN (ospf_default_information_originate,
        ospf_default_information_originate_cmd,
-       "default-information originate [{always|metric (0-16777214)|metric-type (1-2)|route-map WORD}]",
+       "default-information originate [{always|metric (0-16777214)|metric-type (1-2)|route-map RMAP_NAME}]",
        "Control distribution of default information\n"
        "Distribute a default route\n"
        "Always advertise default route\n"
@@ -9450,7 +9450,7 @@ DEFUN (ospf_default_information_originate,
 
 DEFUN (no_ospf_default_information_originate,
        no_ospf_default_information_originate_cmd,
-       "no default-information originate [{always|metric (0-16777214)|metric-type (1-2)|route-map WORD}]",
+       "no default-information originate [{always|metric (0-16777214)|metric-type (1-2)|route-map RMAP_NAME}]",
        NO_STR
        "Control distribution of default information\n"
        "Distribute a default route\n"
